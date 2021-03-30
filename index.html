@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navitude HQ</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+         body{
+                background-image: url(img/bg.png) ;
+                background-repeat: no-repeat fixed;
+                background-size: 100%;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            @font-face {  
+                font-family: 'PirataOne'; 
+                src: url('font/pirataone.ttf');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {  
+                font-family: 'Quicksand Light'; 
+                src: url('font/quicksandlight.otf');
+                font-style: normal;
+            }
+    </style>
+</head>
+<body>
+    
+    <nav class="navegador">
+        
+        <div class="cabecalho-navegador">
+            <a href="index.html"> <img class="logo-site" src="img/navitude-logo.png" alt=""></a>
+            <button class="hamburg">&#9776;</button>
+            
+            <div class="menu-retratil-visivel">
+                <a href="index.html"> HOME</a>
+                <a href="#personagens-h3"> PERSONAGENS</a>
+                <a href="leianavitude.html"> LEIA NAVITUDE</a>
+                <a href=" " 
+                style="padding: 15px 25px; 
+                border-radius:10px ; 
+                background-color: #FAB934; 
+                color: #31616d;"> APOIE ESTE PROJETO</a>
+            </div>
+
+        </div>
+
+                <div class="menu-retratil">
+                    <a href="index.html"> HOME</a>
+                    <a href="#personagens-h3"> PERSONAGENS</a>
+                    <a href="leianavitude.html"> LEIA NAVITUDE</a>
+                    <a href=""> APOIE ESTE PROJETO</a>
+                </div>
+       
+       </nav> 
+
+
+    <div class="container-home">
+        <div class="personagens">
+        <img src="img/personagens.png" id="personagens-home" style="width: 80%; margin-top: 40px;" alt="">
+        </div>
+
+        <div class="texto">
+            <h3>UMA VIAGEM A SI MESMO </h3>
+            <p>Ao lado de Zero U, Aquiles, Zara e Sero,
+                Margô descobrirá como se mexer e fazer acontecer
+                mesmo quando tudo parece dar errado, e então
+                entender o significado de amor e solitude, navegando em
+                mares e terras desconhecidas.</p>
+                <button class="conheca" >
+                   <a href="#container-sobre-membros">CONHEÇA</a> 
+                </button>
+        </div>
+    </div>
+
+    <div class="container-personagens" >
+        
+            <h3 class="personagens-h3" id="personagens-h3"> PERSONAGENS</h3>
+
+            <div class="overlay-modal-zero">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <button class="modal-close"> x </button>
+                    </div>
+
+                    <div class="modal-content">
+                        <img src="img/zerou-descricao.png">
+                    </div>
+                </div>    
+            
+            </div>
+
+                <!-- zara -->
+            <div class="overlay-modal-zara">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <button class="modal-close1"> x </button>
+                    </div>
+
+                    <div class="modal-content">
+                        <img src="img/zara-descricao.png">
+                    </div>
+                </div>    
+            
+            </div>
+
+            <!-- sero -->
+            <div class="overlay-modal-sero">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <button class="modal-close2"> x </button>
+                    </div>
+
+                    <div class="modal-content">
+                        <img src="img/sero-descricao.png">
+                    </div>
+                </div>    
+            
+            </div>
+
+            <!-- Margo -->
+            <div class="overlay-modal-margo">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <button class="modal-close3"> x </button>
+                    </div>
+
+                    <div class="modal-content">
+                        <img src="img/margo-descricao.png">
+                    </div>
+                </div>    
+            
+            </div>
+
+            <!-- Aquiles -->
+            <div class="overlay-modal-aquiles">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <button class="modal-close4"> x </button>
+                    </div>
+
+                    <div class="modal-content">
+                        <img src="img/aquiles-descricao.png">
+                    </div>
+                </div>    
+            
+            </div>
+
+
+
+            <div class="personagens">
+                
+                <img id="imgMargo" src="img/personagens/p-margo.png" >
+                <img id="imgZero" src="img/personagens/p-zerou.png" >
+                <img id="imgSero" src="img/personagens/p-sero.png" >
+                <img id="imgZara" src="img/personagens/p-zara.png" >
+                <img id="imgAquiles" src="img/personagens/p-aquiles.png">
+
+            </div>
+
+
+    </div>
+
+    <section class="container-sobre" id="container-sobre-membros">
+    
+        <h3 class="quem-somos-h3" id="quem-somos-h3">Quem é o povo por trás do Navitude?</h3>
+        <p >
+            Por trás desse quadrinho cheio de aventuras, existem 5 pessoinhas criativas e 
+            cansadas de tantos eventos ruins <i>since 2020</i>, que resolveram se aventurar nos mares das HQs para expressar
+            suas descobertas durante a quarentena de forma divertida. Conheça... 
+        </p>
+        
+        <div class="membros">
+           
+                    
+            <nav class="acordeon">
+                <div class="acord1">
+                    <input type="checkbox" id="check1">
+                    <label for="check1"> <img src="img/membros/heron.png" alt=""> </label>
+                        <ul class="conteudo">
+                            <li > <p>Colorista e Designer Gráfico</p> </li>
+                        </ul>
+                </div>
+                
+                <div class="acord2">
+                    <input type="checkbox" id="check2">
+                    <label for="check2"> <img src="img/membros/ally.png" alt=""> </label>
+                        <ul class="conteudo2">
+                            <li > <p>Gestor de projeto e Desenhista</p> </li>
+                        </ul>
+                </div>
+
+                <div class="acord3">
+                    <input type="checkbox" id="check3">
+                    <label for="check3"> <img src="img/membros/dya.png" style="width: 210px;"  alt=""> </label>
+                        <ul class="conteudo3">
+                            <li > <p>Diretora de Arte, Roteirista e Dev Front-End</p> </li>
+                        </ul>
+                </div>
+
+                <div class="acord4">
+                    <input type="checkbox" id="check4">
+                    <label for="check4"> <img src="img/membros/gab.png" alt=""> </label>
+                        <ul class="conteudo4">
+                            <li > <p>Designer Gráfico e UX</p> </li>
+                        </ul>
+                </div>
+
+                <div class="acord5">
+                    <input type="checkbox" id="check5">
+                    <label for="check5"> <img src="img/membros/eli.png" alt=""> </label>
+                        <ul class="conteudo5">
+                            <li > <p>Desenhista, Social-Media e Co-Roteirista</p> </li>
+                        </ul>
+                </div>
+            </nav>
+        </div>
+
+
+            <!-- carrossel que ira mostrar qnd estiver responsive -->
+                    
+        <div class="container-carrossel">
+                <div class="slideshow"> 
+                    <img class="img-slider active"  src="img/membros/heron.png?random=1" alt="">
+                    <img class="img-slider"  src="img/membros/ally.png?random=2" alt="">
+                    <img class="img-slider"  src="img/membros/dya.png?random=3" alt="">
+                    <img  class="img-slider" src="img/membros/gab.png?random=4" alt="">
+                    <img class="img-slider"  src="img/membros/eli.png?random=5" alt="">
+                
+                    <span class="voltar"> &lt; </span> 
+                    <span class="avancar"> &gt; </span>
+
+                </div>
+            </div>
+
+
+            </div>
+
+
+    </section>
+
+
+    <footer>
+        <h3 class="h3-footer" style="font-size: 30px; padding-top: 30px;">Nos acompanhe nas redes </h3>
+
+        <div class="container-footer">
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/navitudehq/"><img src="img/insta.png"    class="img-redes" alt="">    </a>
+                <a href="https://navitude.carrd.co/"><img src="img/playlist.png"  class="img-redes" alt=""></a>
+            </div>
+            <img class="barra" src="img/barra.png" style="width: 15px; order: 2;">
+            <div class="outrasinfos">
+                <a href="index.html"> HOME</a>
+                <a href="#personagens-h3"> PERSONAGENS</a>
+                <a href="leianavitude.html"> LEIA NAVITUDE</a>
+                <a href=""> APOIE ESTE PROJETO</a>
+                
+            </div>
+
+        </div>
+     
+        <h4 style="font-family: Quicksand Light; color: rgba(255, 255, 255, 0.301); padding-bottom: 20px; padding-top: 30px; padding: 10px;">
+            Copyright © 2021 Desenvolvido por DyaAlves para Navitude - Todos os direitos reservados
+        </h4>
+    </footer>
+
+ <script src="js/evento.js"></script>
+
+</body>
+</html>

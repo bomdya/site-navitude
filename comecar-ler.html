@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Começar a ler</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+
+
+    <style>
+         body{
+                background-image: url(img/bg.png) ;
+                background-repeat: no-repeat fixed;
+                background-size: 100%;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            @font-face {  
+                font-family: 'PirataOne'; 
+                src: url('font/pirataone.ttf');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {  
+                font-family: 'Quicksand Light'; 
+                src: url('font/quicksandlight.otf');
+                font-style: normal;
+            }
+            .break{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                bottom: 0;
+            }
+            .embed-container {
+                position: relative; 
+                padding-bottom: 60%; 
+                bottom: 0;
+                height:0; 
+                overflow: hidden;  
+                } 
+            .embed-container iframe, .embed-container object, .embed-container embed { 
+                position: absolute; 
+                left: 0; 
+                width: 100%; 
+                height: 100%;
+            }
+       
+            
+    </style>
+</head>
+<body>
+    
+          
+    <nav class="navegador">
+        
+        <div class="cabecalho-navegador">
+           <a href="index.html"> <img class="logo-site" src="img/navitude-logo.png" alt=""></a>
+            <button class="hamburg">&#9776;</button>
+            
+            <div class="menu-retratil-visivel">
+                <a href="index.html"> HOME</a>
+                <a href="index.html"> PERSONAGENS</a>
+                <a href="leianavitude.html"> LEIA NAVITUDE</a>
+                <a href=" " 
+                style="padding: 15px 25px; 
+                border-radius:10px ; 
+                background-color: #FAB934; 
+                color: #31616d;"> APOIE ESTE PROJETO</a>
+            </div>
+
+        </div>
+
+                <div class="menu-retratil">
+                    <a href="index.html"> HOME</a>
+                    <a href="index.html"> PERSONAGENS</a>
+                    <a href="leianavitude.html"> LEIA NAVITUDE</a>
+                    <a href=""> APOIE ESTE PROJETO</a>
+                </div>
+       
+       </nav> 
+
+
+
+<!-- navegador de leitura -->
+           
+            <div class="navegador-ler">
+                <div class="cabecalho-ler">
+                    <a href="leianavitude.html">SOBRE</a>
+                    <a href="comecar-ler.html">COMEÇAR A LER</a>
+                    <a href="comentarios.html">COMENTÁRIOS</a>
+                </div>
+            </div>
+
+
+    <div class="container-ler" id="lendo">
+     
+        <div class="break">
+            <div class='embed-container' data-page-width='451' data-page-height='460' id='ypembedcontainer' >
+                <iframe  src="https://www.yumpu.com/pt/embed/view/gA3XZnONmdecjr7i" frameborder="0" allowfullscreen="true"  allowtransparency="true"></iframe>
+            </div>
+            <script src='https://players.yumpu.com/modules/embed/yp_r_iframe.js'>
+            </script>
+        </div>
+    </div>
+
+    <script> 
+    
+                //menu retratil 
+                
+                let button = document.querySelector(".navegador .cabecalho-navegador button");
+                let menu_retratil = document.querySelector(".navegador .menu-retratil");
+     
+                 button.addEventListener("click", function(){
+                     menu_retratil.classList.toggle("active");
+                 });
+</script>
+
+</body>
+</html>

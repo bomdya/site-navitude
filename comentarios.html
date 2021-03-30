@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comentários</title>
+  <link rel="stylesheet" href="css/estilo.css">
+   <style>
+   *{
+    padding: 0;
+    margin: 0;
+}
+    body{
+                background-image: url(img/bg.png) ;
+                background-repeat: no-repeat fixed;
+                background-size: 100%;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            @font-face {  
+                font-family: 'PirataOne'; 
+                src: url('font/pirataone.ttf');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {  
+                font-family: 'Quicksand Light'; 
+                src: url('font/quicksandlight.otf');
+                font-style: normal;
+            }
+.navegador-coment /* superior*/ { 
+    background-color: #235561;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+}
+.navegador-coment .cabecalho-navegador-coment{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px 5px;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+button.bt-postar{
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    color: #235561;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #FAB934;
+    width: 100px;
+}
+
+@media screen and (max-width: 768px){
+    .overlay-modal-coment {
+        display: none;
+    }
+    
+    
+  
+}
+
+/* modal css */
+
+.overlay-modal-coment{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-modal-coment.active{
+    display: flex;
+}
+.modal-container-coment{
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+    height: 300px;
+    position: relative;
+}
+.modal-container-coment .modal-header-coment{
+    display: flex;
+    padding: 3px 25px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+.modal-container-coment .modal-header-coment button{
+    margin-left: auto;
+    background-color: transparent;
+    border: 0px;
+    width: 49px;
+    height: 50px;
+    cursor: pointer;
+}
+.modal-container-coment .modal-content-form form{
+    padding: 30px 70px 10px;
+    justify-content: center;
+    align-items: center;
+}
+.nome-form{
+    width: 90%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgba(8, 137, 141, 0.226);
+    border: solid 1px rgba(3, 67, 70, 0.226);    
+}
+.container{
+    margin-bottom: 100px;
+}
+.postar-h3{
+    color: #000;
+    font-size: 20px;
+}
+.mensagem-form{
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    background-color: rgba(8, 137, 141, 0.226);
+    border: solid 1px rgba(3, 67, 70, 0.226);  
+}
+.nome-form::-webkit-input-placeholder {
+    color:  rgba(2, 43, 44, 0.486);
+    font-weight: 700;
+    font-size: 10px;
+    padding: 10px;
+}
+.mensagem-form::-webkit-input-placeholder {
+    color:  rgba(2, 43, 44, 0.486);
+    font-weight: 700;
+    font-size: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.modal-container-coment .modal-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-end;
+
+}
+.modal-container-coment .modal-footer .bt-modal{
+    border: none;
+    border-radius: 5px;
+    margin-left: 6px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.modal-container-coment .modal-footer .bt-modal.bt-submit{
+    background-color: #FAB934;
+    color: #235561;
+}
+.modal-container-coment .modal-footer .bt-modal.bt-close{
+    background-color: #636466;
+}
+
+.feed{
+   padding: 20px 90px;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.feed .card{
+    width: 400px;
+    padding: 20px 20px 40px;
+    margin: 20px;
+    border-radius: 15px;
+    color: rgb(19, 43, 73);
+    background-color:#FAB934;
+}
+
+.feed .card-1{
+    width: 400px;
+    padding: 20px 20px 40px;
+    margin-top: 40px;
+    margin: 20px;
+    border-radius: 15px;
+    color: rgb(19, 43, 73);
+    background-color:#FAB934;
+}
+
+.feed .card-1 .nome-card-1{
+    padding: 10px 0px 12;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+ 
+}
+.feed .card .nome-card{
+    padding: 10px 0px 12;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+ 
+}
+
+.mensagem-card{
+    font-family: Quicksand Light;
+    font-weight: bolder;
+    font-size: 17px;
+    }
+    @media screen and (max-width: 768px){
+        .modal-container-coment{
+            width: 80%;
+            height: 40%;
+        }
+        .mensagem-form, .nome-form{
+            width: 100%;
+        }
+        .feed .card .nome-card{
+         font-size: 16px;
+        }
+    }
+
+</style>
+    
+</head>
+<body>
+       
+    <nav class="navegador">
+        
+        <div class="cabecalho-navegador">
+            <a href="index.html"> <img class="logo-site" src="img/navitude-logo.png" alt=""></a>
+            <button class="hamburg">&#9776;</button>
+            
+            <div class="menu-retratil-visivel">
+                <a href="index.html"> HOME</a>
+                <a href="index.html"> PERSONAGENS</a>
+                <a href="leianavitude.html"> LEIA NAVITUDE</a>
+                <a href=" " 
+                style="padding: 15px 25px; 
+                border-radius:10px ; 
+                background-color: #FAB934; 
+                color: #31616d;"> APOIE ESTE PROJETO</a>
+            </div>
+
+        </div>
+
+                <div class="menu-retratil">
+                    <a href="index.html"> HOME</a>
+                    <a href="index.html"> PERSONAGENS</a>
+                    <a href="leianavitude.html"> LEIA NAVITUDE</a>
+                    <a href=""> APOIE ESTE PROJETO</a>
+                </div>
+       
+       </nav> 
+
+
+       <!-- navegador de leitura -->
+    <div class="navegador-ler">
+        <div class="cabecalho-ler">
+            <a href="leianavitude.html">SOBRE</a>
+            <a href="comecar-ler.html">COMEÇAR A LER</a>
+            <a href="comentarios.html">COMENTÁRIOS</a>
+        </div>
+    </div>
+
+    
+    <nav class= "navegador-coment">
+        <div class="cabecalho-navegador-coment">
+ 
+        <div class="post">
+            <button class="bt-postar"> Comentar </button>
+        </div>
+
+         
+        </div>
+        
+        
+    </nav>
+    
+    <div class="container">
+     
+           <!-- modal e overlay -->
+           <div class="overlay-modal-coment">
+            <div class="modal-container-coment">
+                <div class="modal-header-coment">
+                    <h3 class="postar-h3" style="font-family: Arial, Helvetica, sans-serif;">Postar comentário</h3>
+                    <button class="modal-close"> x </button>
+                </div>
+                <div class="modal-content-form">
+               
+                    <!-- form -->
+                    <form class="formulario-msg" action="">
+                       <input class="nome-form" type="text"  placeholder="Nome">
+                       <input class="mensagem-form" type="text"  maxlength = "140" class="mensagem" 
+                       placeholder="Escreva sua mensagem">
+                   
+                    </form>
+                    <!-- form -->
+                        
+                    </div>
+                        <div class="modal-footer">
+                            <button class="bt-modal bt-close">
+                                Fechar
+                            </button>
+                            <input class="bt-modal bt-submit" type="submit" value="Enviar"> 
+                            
+                            </button>
+                        </div>
+                    </div>
+                </div>    
+          <!-- fecha modal -->
+
+
+        
+       <div class="feed">
+            <div class="card-1">
+                <h3 class="nome-card-1"> Joca </h3>
+                <p class="mensagem-card"> Amei sz já quero a hq completa! </p>
+            </div>
+            
+            <div class="card">
+                <h3 class="nome-card"> João </h3>
+                <p class="mensagem-card"> SOCORRO TÁ PERFEITO </p>
+            </div>
+       </div>
+
+    </div>
+
+
+
+
+
+
+
+   
+
+            <script>   
+            
+                // bottons navegador
+
+                let botao = document.querySelector(".navegador-coment .cabecalho-navegador-coment ");
+
+                let menu_retratil_c = document.querySelector(".navegador-coment .menu-retratil");
+                botao.addEventListener("click" , function(){
+                    menu_retratil_c.classList.toggle("active");
+                });
+
+                //modal
+                let btPostar = document.querySelector(".navegador-coment .post .bt-postar");
+                let overlayModalC = document.querySelector (".container .overlay-modal-coment");
+                
+                // abrir modal com o botao Postar
+                btPostar.addEventListener("click", function(){
+                    overlayModalC.classList.add("active");
+                })
+
+                // fechar modal com o X
+                let buttonFechar = document.querySelector(".modal-container-coment .modal-footer .bt-close");
+                btPostar.addEventListener("click", function(){
+                    overlayModalC.classList.add("active");
+                })
+                buttonFechar.addEventListener("click", function(){
+                    overlayModalC.classList.remove("active")
+                })
+
+                // fechar clicando no botão close
+                let modalClose = document.querySelector(".modal-container-coment .modal-header-coment .modal-close");
+                buttonFechar.addEventListener("click", function(){
+                    overlayModalC.classList.remove("active")
+                })
+                modalClose.addEventListener("click", function(){
+                    overlayModalC.classList.remove("active");
+                })
+
+                // quando clicar em Enviar fechar o modal
+                let buttonSubmit = document.querySelector(".modal-container-coment .modal-footer .bt-submit");
+                btPostar.addEventListener("click", function(){
+                    overlayModalC.classList.add("active");
+                })
+                buttonSubmit.addEventListener("click", function(){
+                    overlayModalC.classList.remove("active")
+                })
+
+                // fechar clicando fora
+                window.addEventListener("click", function (event){
+                    if(event.target == overlayModalC){
+                        overlayModalC.classList.remove("active");
+                    }
+                })
+
+
+                //formulário mensagem
+
+                                
+                let nome_form = document.querySelector(".nome-form");
+                let mensagem_form = document.querySelector(".mensagem-form");
+                let bt_submit = document.querySelector(".bt-submit");
+                let feed = document.querySelector(".feed");
+                //end formulario 
+
+                //botão
+               bt_submit.addEventListener("click",  function (event) {
+                    event.preventDefault();
+                    let nome = nome_form.value;
+                    let mensagem = mensagem_form.value;
+                    
+                        let card = document.createElement("div");
+                        card.classList.add("card");
+                        feed.appendChild(card);
+
+                        let h3 = document.createElement("h3");
+                        h3.classList.add("nome-card");
+                        let text_h3 = document.createTextNode(nome);
+                        h3.appendChild(text_h3);
+                        card.appendChild(h3);
+
+                        let mensagem_p = document.createElement("p");
+                        mensagem_p.classList.add("mensagem-card");
+                        let text_mensagem = document.createTextNode(mensagem);
+                        mensagem_p.appendChild(text_mensagem);
+                        card.appendChild(mensagem_p);
+
+                })
+                
+                //menu retratil 
+                
+                let button = document.querySelector(".navegador .cabecalho-navegador button");
+                let menu_retratil = document.querySelector(".navegador .menu-retratil");
+     
+                 button.addEventListener("click", function(){
+                     menu_retratil.classList.toggle("active");
+                 });
+                    
+            </script>
+        <!-- fecha js modal -->
+
+
+</body>
+</html>

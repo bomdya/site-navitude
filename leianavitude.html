@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navitude HQ</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+         body{
+                background-image: url(img/bg.png) ;
+                background-repeat: no-repeat fixed;
+                background-size: 100%;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            @font-face {  
+                font-family: 'PirataOne'; 
+                src: url('font/pirataone.ttf');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {  
+                font-family: 'Quicksand Light'; 
+                src: url('font/quicksandlight.otf');
+                font-style: normal;
+            }
+    </style>
+</head>
+<body>
+    
+                
+    <nav class="navegador">
+        
+        <div class="cabecalho-navegador">
+            <a href="index.html"><img class="logo-site" src="img/navitude-logo.png" alt=""></a>
+            <button class="hamburg">&#9776;</button>
+            
+            <div class="menu-retratil-visivel">
+                <a href="index.html"> HOME</a>
+                <a href="index.html"> PERSONAGENS</a>
+                <a href="leianavitude.html"> LEIA NAVITUDE</a>
+                <a href=" " 
+                style="padding: 15px 25px; 
+                border-radius:10px ; 
+                background-color: #FAB934; 
+                color: #31616d;"> APOIE ESTE PROJETO</a>
+            </div>
+
+        </div>
+
+                <div class="menu-retratil">
+                    <a href="index.html"> HOME</a>
+                    <a href="index.html"> PERSONAGENS</a>
+                    <a href="leianavitude.html"> LEIA NAVITUDE</a>
+                    <a href=""> APOIE ESTE PROJETO</a>
+                </div>
+       
+       </nav> 
+
+
+       
+
+           <!-- navegador de leitura -->
+            <div class="navegador-ler">
+                <div class="cabecalho-ler">
+                    <a href="#sobre-hq">SOBRE</a>
+                    <a href="comecar-ler.html">COMEÇAR A LER</a>
+                    <a href="comentarios.html">COMENTÁRIOS</a>
+                </div>
+            </div>
+
+
+    <div class="container-sobre-hq" id="sobre-hq">
+
+            <div class="foto-capa">
+                <img class="capa" src="img/capa.png" style="width: 300px;" alt="">   
+            </div>
+            <p> Hanna está até que contente com sua vidinha de adolescente. Da escola para casa, de casa para twitter, sua vida tem sido resumida em acompanhar 
+                as trendings. Mas essa rotina vira de cabeça para baixo quando Hanna vai dormir em uma noite comum e acorda no dia seguinte em uma praia 
+                estranha ao lado de um robô confuso. Ela enlouquece no começo, 
+                com medo de ficar de castigo e ainda perder o resultado da lista de indicações para o Grammy, então ela tem que dar um jeito de ir para casa. 
+                Ao lado de um robô, um menino perdido, uma sereia e um pirata, Hanna descobrirá como se mexer e fazer acontecer mesmo 
+                quando tudo parece dar errado para finalmente entender o significado de amor e solitude, navegando em mares e terras desconhecidas.
+            </p>
+    </div>
+
+
+
+
+ <script>
+     
+                //menu retratil 
+                
+                let button = document.querySelector(".navegador .cabecalho-navegador button");
+                let menu_retratil = document.querySelector(".navegador .menu-retratil");
+     
+                 button.addEventListener("click", function(){
+                     menu_retratil.classList.toggle("active");
+                 });
+ </script>
+
+</body>
+</html>
